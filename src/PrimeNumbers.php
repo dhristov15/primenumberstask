@@ -30,10 +30,6 @@ class PrimeNumbers {
 	}
 
 	public function getPrimeNumbers () { 
-		if ($this->length <= 0) {
-			return [];
-		}
-		
 		$primeNumbers = [];
 		$number = 2;
 		while (count($primeNumbers) < $this->length) {
@@ -47,6 +43,11 @@ class PrimeNumbers {
 	}
 
 	public function printMultiplicationTable () {
+		if ($this->length <= 0) {
+			echo 'Length must be greater than 0';
+			return;
+		}
+
 		$mask = $this->getPrintMask();
 
 		$primeNumbers = $this->getPrimeNumbers();
