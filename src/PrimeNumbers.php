@@ -4,6 +4,11 @@ class PrimeNumbers {
 
     public function __construct($givenLength) {
     	$givenLength = (int) $givenLength;
+    	
+		if ($givenLength <= 0) {
+			echo 'Length must be greater than 0';
+			exit;
+		}
 
         $this->length = $givenLength;
     }
@@ -43,11 +48,6 @@ class PrimeNumbers {
 	}
 
 	public function printMultiplicationTable () {
-		if ($this->length <= 0) {
-			echo 'Length must be greater than 0';
-			return;
-		}
-
 		$mask = $this->getPrintMask();
 
 		$primeNumbers = $this->getPrimeNumbers();
