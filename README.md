@@ -1,1 +1,1 @@
-Simple console program which outputs the multiplication table of (n) number of prime numbers
+Simple console program which outputs the multiplication table for (n) number of prime numbers
